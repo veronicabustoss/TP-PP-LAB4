@@ -1,0 +1,16 @@
+<table class="table table-dark" >
+    <thead >
+      <tr>
+        <th scope="col">Foto</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Boton</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let personaje of listaFavoritos">
+      <tr>
+        <td> <img [src]="personaje.image" alt="" width="200" height="200" style="margin: 1rem;"></td>
+        <td> <h5 style="color: beige;">{{personaje.name | uppercase }}</h5></td>
+        <td> <button class="btn btn-danger " (click)="borrarFavorito(personaje)" style="margin: 1mm;">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>

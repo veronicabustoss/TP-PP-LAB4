@@ -1,0 +1,76 @@
+
+  <div class="alert alert-danger" role="alert"  *ngIf="mostrarAlerta"style="height: 50px;width: 50; top: 0;" role="alert">
+    <strong>Error!</strong> No se puede agregar al mismo episodio.
+
+  </div>
+
+<div *ngIf="mostrarListado == true">
+
+    <div class="centrarBotones">
+        
+        <h2 style="color: snow;">Ordenar el nombre de forma :</h2>
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6" align="center">
+                <button class="btn btn-light btn-block" (click)="ordenarListaAsd()">Ascendente</button>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 " align="center">
+                <button class="btn btn-light  btn-block" (click)="ordenarListaDes()">Descendente</button>
+            </div>
+        </div>
+        <br>
+        <div class="form-inline ">  
+            
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6" align="center">
+                    <input class="form-control " type="search" placeholder="Nombre" aria-label="Nombre"  [(ngModel)]="nombreEpisodio">
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 " align="center">
+                    <button class="btn btn-outline-success" (click)="buscarEpisodio(nombreEpisodio)">Buscar nombre</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div *ngIf="listadoEncontrado.length == 0">
+    
+        <div class="fondoListado" align="center">
+            <div class="listadoPersonalizado" align="center" style="margin: 1rem;">
+                <div *ngFor="let episodio of listado">
+                    <div class="card card-danger" style="margin :1%; width: 200px; height: 160px; background:#0c1612f6">
+                        <h5 style="color: snow;margin: 3%;">{{episodio.name | uppercase }}</h5>
+                        <button class="btn btn-success " style="margin: 1mm;" (click)="detalleEpisodio(episodio)">Ver detalle</button>
+                        <div *ngIf="user">
+                            <button class="btn btn-warning" (click)="agregarFavorito(episodio)">Favoritos</button>
+                        </div> 
+                    </div>
+                    
+                </div> 
+                <br>
+            </div>    
+        </div>
+    </div>
+    
+    
+    <div *ngIf="listadoEncontrado.length > 0" class="listadoPersonalizado">
+    
+        <div *ngFor="let episodio of listadoEncontrado">
+            <div align="center">
+                <h2>{{episodio.name}}</h2>
+            </div>
+        </div> 
+    
+    </div>
+    
+    </div>
+    
+
+    
+<div *ngIf="!mostrarListado">
+    <app-detalle-episodio
+    [episodio]='datosEpisodio'
+    (cambio) = 'funCambiar($event)'
+    ></app-detalle-episodio>
+
+</div>
+
+ 

@@ -1,0 +1,31 @@
+
+
+.listadoPersonalizado{
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-self: auto;
+
+}
+
+
+.fondoListado{
+
+    align-content: center;
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    left: 18%;
+
+}
+
+.centrarBotones{
+    align-content: center;
+    width: 55%;
+    height: 50%;
+    position: relative;
+    left: 20%;
+    background: #0c1612f6;
+    border-radius: 1rem;
+}

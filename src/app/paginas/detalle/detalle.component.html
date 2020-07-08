@@ -1,0 +1,22 @@
+
+  <div class="alert alert-danger" role="alert"  *ngIf="mostrarAlerta"style="height: 50px;width: 50; top: 0;" role="alert">
+    <strong>Error!</strong> No se puede agregar al mismo personaje.
+
+  </div>
+
+<div style="padding-left: 40%; padding-top: 3%; left: 39%;" >
+    <div class="card" class="estiloCard" align="center" >
+        <div align="center" style="color: snow;">
+            <img [src]="personaje.image" alt="" style="border-radius: 10%;padding-top: 1rem;" width="270px" height="270px">
+            <h2>{{personaje.name | uppercase}}</h2>
+            <p>Estado: <span>{{personaje.status}}</span></p>
+            <p>Especie: <span>{{personaje.species}}</span></p>
+            <p>Origen: <span>{{personaje.location.name}}</span></p>
+            <p>Genero: <span>{{personaje.gender}}</span></p>
+            <button class="btn btn-success " style="margin: 1mm;" (click)="cambiar()">Volver atras</button>
+            <div *ngIf="user">
+                <button class="btn btn-warning"  (click)="agregarFavorito(personaje)">Favorito</button>
+            </div> 
+        </div>
+    </div>
+</div>

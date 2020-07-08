@@ -1,0 +1,31 @@
+.listadoPersonalizado{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-self: auto;
+
+}
+.listadoPersonalizado.img{
+    
+    border-radius: 1rem;
+
+}
+
+
+.fondoListado{
+
+    align-content: center;
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    left: 18%;
+    border-radius: 5px;
+
+}
+
+.table {
+    width: 600px;
+    margin: 16px auto;
+    font-size: 16px;
+  }

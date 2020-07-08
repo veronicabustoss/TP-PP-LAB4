@@ -1,0 +1,86 @@
+
+    @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+    body {
+      background: rgba(31, 31, 31, 0.9); 
+    }
+    
+    h1 {
+      color: rgba(29, 29, 29, 0.9);
+      font: normal 140px Varela Round, sans-serif;
+      height: 140px;
+      left: 0;
+      letter-spacing: 5px;
+      margin: -80px 0 0 0;
+      position: absolute;
+      text-align: center;
+      text-transform: uppercase;
+      top: 27%;
+      width: 100%;
+      animation: move linear 2000ms infinite;  
+    }
+    
+    @keyframes move {
+      0% {
+        text-shadow:
+          4px -4px 0 rgb(20, 173, 0), 
+          3px -3px 0 rgb(20, 173, 0), 
+          2px -2px 0 rgb(20, 173, 0), 
+          1px -1px 0 rgb(20, 173, 0),
+          -4px 4px 0 rgb(251, 255, 0), 
+          -3px 3px 0 rgb(251, 255, 0), 
+          -2px 2px 0 rgb(251, 255, 0), 
+          -1px 1px 0 rgb(251, 255, 0)
+        ;
+      }
+      25% {    
+        text-shadow:      
+          -4px -4px 0 rgb(251, 255, 0), 
+          -3px -3px 0 rgb(251, 255, 0), 
+          -2px -2px 0 rgb(251, 255, 0), 
+          -1px -1px 0 rgb(251, 255, 0),
+          4px 4px 0 rgb(20, 173, 0), 
+          3px 3px 0 rgb(20, 173, 0), 
+          2px 2px 0 rgb(20, 173, 0), 
+          1px 1px 0 rgb(20, 173, 0),   
+        ;
+      }
+      50% {
+        text-shadow:
+          -4px 4px 0 rgb(20, 173, 0), 
+          -3px 3px 0 rgb(20, 173, 0), 
+          -2px 2px 0 rgb(20, 173, 0), 
+          -1px 1px 0 rgb(20, 173, 0), 
+          4px -4px 0 rgb(251, 255, 0), 
+          3px -3px 0 rgb(251, 255, 0), 
+          2px -2px 0 rgb(251, 255, 0), 
+          1px -1px 0 rgb(251, 255, 0)
+        ;
+      }
+      75% {
+        text-shadow:
+          4px 4px 0 rgb(251, 255, 0),  
+          3px 3px 0 rgb(251, 255, 0),  
+          2px 2px 0 rgb(251, 255, 0), 
+          1px 1px 0 rgb(251, 255, 0), 
+          -4px -4px 0 rgb(20, 173, 0), 
+          -3px -3px 0 rgb(20, 173, 0),  
+          -2px -2px 0 rgb(20, 173, 0), 
+          -1px -1px 0 rgb(20, 173, 0),      
+        ;
+      }
+      100% {
+        text-shadow:
+          4px -4px 0 rgb(20, 173, 0),  
+          3px -3px 0 rgb(20, 173, 0), 
+          2px -2px 0 rgb(20, 173, 0), 
+          1px -1px 0 rgb(20, 173, 0), 
+          -4px 4px 0 rgb(251, 255, 0), 
+          -3px 3px 0 rgb(251, 255, 0),  
+          -2px 2px 0 rgb(251, 255, 0), 
+          -1px 1px 0 rgb(251, 255, 0), 
+        ;
+      }  
+    }
+    
+    

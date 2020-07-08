@@ -1,0 +1,11 @@
+.estiloCard{
+    width: 300px; 
+    height: 550px; 
+    border-radius: 10px;  
+    justify-self: auto; 
+    flex-wrap: wrap;
+    background:#0c1612f6 ; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}

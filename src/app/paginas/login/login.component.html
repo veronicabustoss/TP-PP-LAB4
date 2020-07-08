@@ -1,0 +1,14 @@
+<div id="login-form">
+  <form action=""  [formGroup]="miFormulario">
+    <h1>Iniciar sesión</h1>
+    <div class="input-box">
+        <input type="text" placeholder="Correo" formControlName="correo"  [(ngModel)]="correo">
+    </div>
+
+    <div class="input-box">
+        <input type="password" placeholder="Contraseña" formControlName="password"  [(ngModel)]="contrasenia">
+    </div>
+    
+  </form> 
+  <button class="login-btn" [disabled]="!miFormulario.valid" (click)="iniciarSesion(correo,contrasenia)">Logearse</button>
+</div>

@@ -1,0 +1,18 @@
+
+  <div class="alert alert-danger" role="alert"  *ngIf="mostrarAlerta"style="height: 50px;width: 50; top: 0;" role="alert">
+    <strong>Error!</strong> No se puede agregar al mismo episodio.
+  </div>
+
+<div style="padding-left: 40%; padding-top: 10%; left: 39%;" >
+    <div class="card" class="estiloCard" align="center" >
+        <div align="center" style="color: snow;">
+            <h2 style="margin: 5px;">{{episodio.name | uppercase}}</h2>
+            <p>Al aire el: <span>{{episodio.air_date}}</span></p>
+            <p>Episodio: <span>{{episodio.episode}}</span></p>
+            <button class="btn btn-success " style="margin: 1mm;" (click)="cambiar()">Volver atras</button>
+            <div *ngIf="user">
+                <button class="btn btn-warning"  (click)="agregarFavorito(episodio)">Favorito</button>
+            </div> 
+        </div>
+    </div>
+</div>

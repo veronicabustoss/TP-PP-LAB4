@@ -1,0 +1,18 @@
+<div id="login-form">
+<form action=""  [formGroup]="miFormulario">
+    <h1>Registrarse</h1>
+    <div class="input-box">
+        <input type="text" placeholder="Correo" formControlName="correo" [(ngModel)]="correo" >
+    </div>
+  
+    <div class="input-box">
+        <input type="password" placeholder="Contraseña" formControlName="password"  [(ngModel)]="contrasenia" >
+    </div>
+    <div class="input-box">
+        <input type="password" placeholder="Ingrese nuevamente contraseña" formControlName="passwordTwo" >
+    </div>
+  
+  </form> 
+  <button class="login-btn" [disabled]="!miFormulario.valid" (click)="registrarUsuario(correo,contrasenia)">Registrate</button>
+
+</div>

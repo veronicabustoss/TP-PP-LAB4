@@ -1,0 +1,14 @@
+<table class="table table-dark" >
+    <thead >
+      <tr>
+        <th scope="col">Nombre Episodio</th>
+        <th scope="col">Boton</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let episodio of listaFavoritosEpisodios">
+      <tr>
+        <td> <h5 style="color: beige;">{{episodio.name | uppercase }}</h5></td>
+        <td> <button class="btn btn-danger " (click)="borrarFavorito(episodio)" style="margin: 1mm;">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>

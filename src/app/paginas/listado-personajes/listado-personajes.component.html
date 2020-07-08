@@ -1,0 +1,79 @@
+
+
+  <div class="alert alert-danger" role="alert"  *ngIf="mostrarAlerta"style="height: 50px;width: 50; top: 0;" role="alert">
+    <strong>Error!</strong> No se puede agregar al mismo personaje.
+
+  </div>
+
+
+<div *ngIf="mostrarListado == true">
+    <div class="centrarBotones">
+        
+        <h2 style="color: snow;">Ordenar el nombre de forma :</h2>
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6" align="center">
+                <button class="btn btn-light btn-block" (click)="ordenarListaAsd()">Ascendente</button>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 " align="center">
+                <button class="btn btn-light  btn-block" (click)="ordenarListaDes()">Descendente</button>
+            </div>
+        </div>
+        <br>
+        <div class="form-inline ">  
+            
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6" align="center">
+                    <input class="form-control " type="search" placeholder="Nombre" aria-label="Nombre"  [(ngModel)]="nombrePersonaje">
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 " align="center">
+                    <button class="btn btn-outline-success" (click)="buscarPersonaje(nombrePersonaje)">Buscar nombre</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div *ngIf="listadoEncontrado.length == 0">
+
+    <div class="fondoListado" align="center">
+        <div class="listadoPersonalizado" align="center" style="margin: 1rem;">
+            <div *ngFor="let personaje of listado">
+                <div class="card card-danger" style="margin :10%; width: 250px; height: 360px; background:#0c1612f6">
+                    <img [src]="personaje.image" alt="" width="200" height="200" style="border-radius: 100%;margin: 1rem;">
+                    <h5 style="color: beige;">{{personaje.name | uppercase }}</h5>
+                    <button class="btn btn-success " style="margin: 1mm;" (click)="detallePersonaje(personaje)">Ver detalle</button>
+                    <div *ngIf="user">
+                        <button class="btn btn-warning" (click)="agregarFavorito(personaje)">Favoritos</button>
+                    </div> 
+                </div>
+                
+            </div> 
+            <br>
+        </div>    
+    </div>
+</div>
+
+
+<div *ngIf="listadoEncontrado.length > 0" class="listadoPersonalizado">
+
+    <div *ngFor="let personaje of listadoEncontrado">
+        <div align="center">
+            <img [src]="personaje.image" alt="">
+            <h2>{{personaje.name}}</h2>
+        </div>
+    </div> 
+
+</div>
+
+</div>
+
+
+<div *ngIf="!mostrarListado">
+    <app-detalle
+    [personaje]='datosPersonaje'
+    (cambio) = 'funCambiar($event)'
+    ></app-detalle>
+
+
+</div>

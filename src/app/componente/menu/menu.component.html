@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <a class="navbar-brand"  routerLink=""><img src="../../../assets/rickIcon.png" alt="" width="30px" height="30px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+      </span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/login">Iniciar sesion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"  routerLink="/registrarse">Registrarse</a>
+          </li>
+
+        <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Listado</a>
+            <div class="dropdown-menu" style="background: rgb(48, 47, 68);">
+              <a class="nav-link"  style="color: rgb(216, 216, 216);" routerLink="/listado-personajes">Personajes</a>
+              <div class="dropdown-divider"></div>
+              <a class="nav-link"  style="color: rgb(216, 216, 216);" routerLink="/listado-episodios">Episodios</a>
+            </div>
+          </li>
+
+        <li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Favoritos</a>
+          <div class="dropdown-menu" style="background: rgb(48, 47, 68);">
+            <a class="nav-link"  style="color: rgb(216, 216, 216);" routerLink="/favoritos">Personajes</a>
+            <div class="dropdown-divider"></div>
+            <a class="nav-link"  style="color: rgb(216, 216, 216);" routerLink="/favoritos-episodios">Episodios</a>
+          </div>
+        </li>
+
+  
+      </ul>
+      <ul class="navbar-nav justify-content-end" >
+        <li>
+          <a class="nav-link"  style="color: rgb(216, 216, 216);" routerLink="/info-personal">Acerca de..</a>
+        </li>
+      
+      </ul>
+      <ul class="navbar-nav " *ngIf="user$ | async as user" >
+  
+        <li class="nav-item"  *ngIf="user" >
+            <a  class="nav-link">Usuario: {{user.email }}</a>
+          </li>
+        <li class="nav-item" *ngIf="user" >
+            <a class="nav-link"   routerLink="/login" (click)="deslogearse()"style="color:snow">Cerrar sesion</a>
+        </li>
+    </ul>
+
+    </div>
+  </nav>
