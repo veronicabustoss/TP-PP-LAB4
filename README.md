@@ -1,2 +1,5 @@
 # TP-PP-LAB4
-Se trabajo con la api de Rick and Morty, haciendo un listado de los personajes y los episodios
+* Api utilizada : [https://rickandmortyapi.com/]
+* Nombre : Veronica Bustos
+* Profesor : Mario Rampi
+* Zeit : 
